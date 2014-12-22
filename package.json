@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/unibot/unibot-logs/issues"
   },
-  "homepage": "https://github.com/unibot/unibot-logs"
+  "homepage": "https://github.com/unibot/unibot-logs",
+  "dependencies": {
+    "mongoose": "^3.8.21"
+  }
 }
