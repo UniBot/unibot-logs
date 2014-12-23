@@ -17,7 +17,7 @@ var Logs = new mongoose.Schema({
 var model = mongoose.model('Logs', Logs);
 
 var plugin = function(channel, config){
-  var logs;
+  var logs = [];
 
   model.findOne({ channel: channel.id }, function(err, _logs_){
     if (err || !_logs_) {
