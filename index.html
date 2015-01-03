@@ -6,7 +6,8 @@
 		</div>
 	</form>
 	<pagination ng-show="$parent.logs.length" total-items="plugin.logs.length | filter: filter" page="currentPage" items-per-page="200" boundary-links="true" rotate="false" max-size="7"></pagination>
-	<p class="alert alert-info text-center" ng-hide="logs.length">Loading...</p>
+	<p class="alert alert-info text-center" ng-hide="logs">Loading...</p>
+	<p class="alert alert-danger text-center" ng-show="logs.length==0">No logs found</p>
 	<ul class="list-unstyled">
 		<li ng-repeat="log in (logs | filter: filter).slice((currentPage - 1) * 200, currentPage * 200)">
 			<span class="text-muted">{{log.timestamp | date : 'short'}}</span>
